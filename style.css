@@ -1,0 +1,251 @@
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: fixed;
+  z-index : 3;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+    .hamburger {
+        display:none;
+    }
+
+
+@media screen and (max-width:767px) {
+    .hamburger {
+      display : block;
+      position: fixed;
+      z-index : 3;
+      right : 13px;
+      top   : 18px;
+      width : 42px;
+      height: 42px;
+      cursor: pointer;
+      text-align: center;
+
+    }
+}
+
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left    : 6px;
+  background : #555;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition   : 0.3s ease-in-out;
+  transition        : 0.3s ease-in-out;
+}
+
+@media screen and (max-width:1440px) {
+    .hamburger span {
+        display:none;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .hamburger span {
+      display : block;
+      position: absolute;
+      width   : 30px;
+      height  : 2px ;
+      left    : 6px;
+      background : #000206;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition   : 0.3s ease-in-out;
+      transition        : 0.3s ease-in-out;
+
+    }
+}
+
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :#fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+.first-navi.active {
+  position: fixed;
+  z-index : 2;
+  top  : 0;
+  left : 0;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+
+@media screen and (max-width:425px) {
+    .first-navi.active {
+      position: fixed;
+      z-index : 2;
+      top  : 0;
+      left : 0;
+      color: #fff;
+      background: rgba(0,0,0,0.7);
+      text-align: center;
+      width: 100%;
+      opacity: 0;
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .first-navi.active ul{
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      display: block;
+      margin-top: 113px;
+      margin-bottom: 110px;
+  }
+}
+
+
+@media screen and (max-width:767px) {
+    .first-navi.active ul li{
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+      transition: .4s all;
+    }
+}
+
+.first-navi.active ul li:last-child {
+  padding-bottom: 0;
+}
+
+.first-navi.active ul li:hover{
+  background :#ddd;
+}
+
+.first-navi.active ul li a {
+  display: block;
+  color: #fff;
+  padding: 2em 0;
+  text-decoration :none;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+.first-navi.active {
+  opacity: 100;
+
+}
+
+.header-surface {
+    position: absolute;
+    padding: 1em 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,0.0);
+    text-align: center;
+    z-index: 2;
+    transition: .3s;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-surface.transform{
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+}
+
+a.header-heading {
+    color: #ffffff;
+    height: 50px;
+    display: block;
+    margin-left: 25px;;
+}
+
+a.header-up:hover {
+    color: #999999;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.first-navi {
+    display: block !important;
+    position: fixed;
+    left: 55%;
+}
+
+
+@media screen and (max-width:1270px) {
+    .first-navi {
+        left: 50%;
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .first-navi {
+        left: 40%;
+    }
+}
+ul.step {
+    display: flex;
+    margin: auto;
+    margin-top: 6px;
+}
+
+@media screen and (max-width:767px) {
+    ul.step {
+        display:none;
+    }
+}
+
+li.step-list {
+    display: block;
+    text-align: center;
+    margin-right: 23px;
+    padding-top: 20px;
+    color: #000206;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width:800px) {
+    li.step-list {
+        margin-right: 0;
+        padding-top: 10px;
+        font-size: 15px;
+    }
+}
